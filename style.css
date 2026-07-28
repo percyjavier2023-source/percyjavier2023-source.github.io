@@ -1,122 +1,300 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Percy Izquierdo - Ingeniero & Educador Técnico</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome para Íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-    <header>
-        <nav>
-            <div class="logo">Percy Izquierdo<span>.dev</span></div>
-            <ul>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
-    <main>
-        <!-- Hero Section -->
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <span class="badge">Sistemas & Educación</span>
-                <h1>Transformando Conocimiento en Soluciones Tecnológicas</h1>
-                <p>Especialista en desarrollo de software, gestión de infraestructura educativa LMS y diseño de arquitectura de sistemas.</p>
-                <div class="hero-buttons">
-                    <a href="#proyectos" class="btn primary">Ver Casos de Estudio</a>
-                    <a href="#contacto" class="btn secondary">Contactar</a>
-                </div>
-            </div>
-        </section>
+body {
+    background-color: #f1f5f9;
+    color: #334155;
+    line-height: 1.6;
+    min-width: 1200px; /* Ancho fijo para evitar desajustes */
+}
 
-        <!-- Sobre Mí -->
-        <section id="sobre-mi" class="about">
-            <h2>Perfil Profesional</h2>
-            <p>Con una sólida trayectoria combinación entre la <strong>Ingeniería de Sistemas</strong> y la <strong>Educación Técnica</strong>, me especializo en diseñar tanto la arquitectura de software como las estrategias pedagógicas para la formación tecnológica de alto impacto.</p>
-        </section>
+/* Header */
+header {
+    background-color: #0f172a;
+    width: 100%;
+    padding: 1rem 0;
+}
 
-        <!-- Tech Stack / Habilidades -->
-        <section id="skills" class="skills-section">
-            <h2>Stack Tecnológico</h2>
-            <div class="skills-grid">
-                <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL Server</span></div>
-                <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
-                <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
-                <div class="skill-card"><i class="fa-solid fa-graduation-cap"></i><span>Moodle LMS</span></div>
-                <div class="skill-card"><i class="fa-solid fa-microchip"></i><span>TinkerCard / IoT</span></div>
-                <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git & GitHub</span></div>
-            </div>
-        </section>
+.header-container {
+    width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        <!-- Proyectos / Casos de Estudio -->
-        <section id="proyectos" class="projects-section">
-            <h2>Proyectos Destacados</h2>
-            <div class="projects-grid">
+.logo {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
 
-                <!-- Tarjeta 1: LMS Moodle -->
-                <article class="project-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-server card-icon"></i>
-                        <span class="category">Infraestructura LMS</span>
-                    </div>
-                    <h3>Implementación & Personalización Moodle 3.7</h3>
-                    <p>Configuración de bloques, gestión de cohortes, optimización del tema visual y despliegue de módulos técnicos para formación vocacional.</p>
-                    <div class="card-tags">
-                        <span>Moodle</span>
-                        <span>PHP</span>
-                        <span>UX/UI Ed</span>
-                    </div>
-                </article>
+.logo span {
+    color: #2563eb;
+}
 
-                <!-- Tarjeta 2: TinkerCard / Arduino -->
-                <article class="project-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-cpu card-icon"></i>
-                        <span class="category">Electrónica & C++</span>
-                    </div>
-                    <h3>Simulación & Prototipado IoT</h3>
-                    <p>Diseño de esquemáticos electrónicos y programación de microcontroladores para automatización y control de sensores en TinkerCard.</p>
-                    <div class="card-tags">
-                        <span>TinkerCard</span>
-                        <span>Arduino</span>
-                        <span>C++</span>
-                    </div>
-                </article>
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
 
-                <!-- Tarjeta 3: BD & Sistemas -->
-                <article class="project-card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-network-wired card-icon"></i>
-                        <span class="category">Sistemas & Datos</span>
-                    </div>
-                    <h3>Modelado de Datos & Procedimientos SQL</h3>
-                    <p>Diseño de esquemas relacionales normalizados, creación de vistas, disparadores y optimización de consultas en Microsoft SQL Server.</p>
-                    <div class="card-tags">
-                        <span>SQL Server</span>
-                        <span>Relational DB</span>
-                        <span>Python</span>
-                    </div>
-                </article>
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-            </div>
-        </section>
-    </main>
+nav a:hover {
+    color: #ffffff;
+}
 
-    <footer id="contacto">
-        <h2>¿Trabajemos Juntos?</h2>
-        <p>Disponible para proyectos de consultoría tecnológica, desarrollo y formación técnica.</p>
-        <div class="social-links">
-            <a href="https://github.com/percyjavier2023-source" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-        </div>
-        <p class="copy">&copy; Percy Izquierdo. Todos los derechos reservados.</p>
-    </footer>
+.btn-nav {
+    background: #2563eb;
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+}
 
-</body>
-</html>
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero-container {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.badge {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.hero p {
+    color: #94a3b8;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Contenedor Principal */
+.main-container {
+    width: 1150px;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.section-block {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 2rem;
+}
+
+.about-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Habilidades (Fila fija de 6 columnas) */
+.skills-row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.skill-card {
+    background: white;
+    width: 170px;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.skill-card i {
+    font-size: 2.2rem;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card span {
+    display: block;
+    font-weight: 600;
+}
+
+/* Tarjetas de Proyectos (Fila fija de 3 columnas) */
+.projects-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.project-card {
+    background: white;
+    width: 350px;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    color: #2563eb;
+}
+
+.category {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.project-card h3 {
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+}
+
+.project-card p {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    height: 90px; /* Mantiene la altura fija de los textos */
+}
+
+.card-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-tags span {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Botón directo dentro de cada tarjeta */
+.card-btn {
+    display: block;
+    text-align: center;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.card-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Footer */
+footer {
+    background: #0f172a;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-container {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer p {
+    color: #94a3b8;
+}
+
+.social-links {
+    margin: 1.5rem 0;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+}
+
+.copy {
+    font-size: 0.85rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
