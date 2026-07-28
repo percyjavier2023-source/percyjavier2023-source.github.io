@@ -11,7 +11,13 @@ body {
     background-color: #f1f5f9;
     color: #334155;
     line-height: 1.6;
-    min-width: 1200px; /* Ancho fijo para evitar desajustes */
+}
+
+/* Contenedores Universales */
+.header-container, .hero-container, .main-container, .footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Header */
@@ -19,14 +25,17 @@ header {
     background-color: #0f172a;
     width: 100%;
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-container {
-    width: 1150px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .logo {
@@ -42,14 +51,16 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: #94a3b8;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -71,11 +82,6 @@ nav a:hover {
     text-align: center;
 }
 
-.hero-container {
-    width: 1150px;
-    margin: 0 auto;
-}
-
 .badge {
     background: rgba(37, 99, 235, 0.2);
     color: #60a5fa;
@@ -84,26 +90,30 @@ nav a:hover {
     font-size: 0.85rem;
     font-weight: 600;
     border: 1px solid rgba(96, 165, 250, 0.3);
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin: 1.5rem 0 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0.5rem 0 1rem;
+    line-height: 1.2;
 }
 
 .hero p {
     color: #94a3b8;
     font-size: 1.15rem;
     margin-bottom: 2rem;
-    width: 800px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -116,17 +126,15 @@ nav a:hover {
 .btn.primary {
     background: #2563eb;
     color: white;
+    transition: 0.3s;
 }
 
-.btn.secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+.btn.primary:hover {
+    background: #1d4ed8;
 }
 
-/* Contenedor Principal */
+/* Secciones Principales */
 .main-container {
-    width: 1150px;
-    margin: 0 auto;
     padding: 4rem 0;
 }
 
@@ -143,33 +151,37 @@ h2 {
 
 .about-card {
     background: white;
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 2.5rem;
+    border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     text-align: center;
     font-size: 1.1rem;
 }
 
-/* Habilidades (Fila fija de 6 columnas) */
+/* Grid de Habilidades Adaptativo */
 .skills-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1.5rem;
-    justify-content: space-between;
 }
 
 .skill-card {
     background: white;
-    width: 170px;
     padding: 1.5rem 1rem;
-    border-radius: 10px;
+    border-radius: 12px;
     text-align: center;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
 }
 
 .skill-card i {
     font-size: 2.2rem;
     color: #2563eb;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .skill-card span {
@@ -177,60 +189,73 @@ h2 {
     font-weight: 600;
 }
 
-/* Tarjetas de Proyectos (Fila fija de 3 columnas) */
+/* Grid de Proyectos Adaptativo */
 .projects-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    justify-content: space-between;
 }
 
 .project-card {
     background: white;
-    width: 350px;
     border-radius: 12px;
-    padding: 2rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     border: 1px solid #e2e8f0;
+    overflow: hidden; /* Esto asegura que la imagen respete las esquinas redondeadas */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de la Imagen en la Tarjeta */
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.card-icon {
-    font-size: 1.5rem;
-    color: #2563eb;
+    margin-bottom: 0.5rem;
 }
 
 .category {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2563eb;
     text-transform: uppercase;
 }
 
 .project-card h3 {
     color: #0f172a;
     margin-bottom: 0.75rem;
+    font-size: 1.25rem;
 }
 
 .project-card p {
     color: #475569;
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
-    height: 90px; /* Mantiene la altura fija de los textos */
+    flex-grow: 1; /* Empuja el botón y tags hacia abajo uniformemente */
 }
 
 .card-tags {
     display: flex;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .card-tags span {
@@ -242,7 +267,6 @@ h2 {
     font-weight: 600;
 }
 
-/* Botón directo dentro de cada tarjeta */
 .card-btn {
     display: block;
     text-align: center;
@@ -267,17 +291,13 @@ footer {
     text-align: center;
 }
 
-.footer-container {
-    width: 1150px;
-    margin: 0 auto;
-}
-
 footer h2 {
     color: white;
 }
 
 footer p {
     color: #94a3b8;
+    margin-top: 0.5rem;
 }
 
 .social-links {
@@ -290,6 +310,11 @@ footer p {
     background: rgba(255, 255, 255, 0.1);
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #2563eb;
 }
 
 .copy {
@@ -297,4 +322,19 @@ footer p {
     margin-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 1rem;
+}
+
+/* Reglas Responsivas (Para móviles y tablets) */
+@media (max-width: 768px) {
+    .header-container {
+        justify-content: center;
+        flex-direction: column;
+    }
+    nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+    .hero {
+        padding: 3rem 0;
+    }
 }
