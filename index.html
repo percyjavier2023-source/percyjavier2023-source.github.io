@@ -2,63 +2,67 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Percy Izquierdo - Ingeniero & Educador Técnico</title>
+    <title>Percy Izquierdo - Portafolio Profesional</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome para Íconos -->
+    <!-- Íconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Encabezado Fijo -->
     <header>
-        <nav>
+        <div class="header-container">
             <div class="logo">Percy Izquierdo<span>.dev</span></div>
-            <ul>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#skills">Especialidades</a></li>
+                    <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <span class="badge">Sistemas & Educación</span>
-                <h1>Transformando Conocimiento en Soluciones Tecnológicas</h1>
-                <p>Especialista en desarrollo de software, gestión de infraestructura educativa LMS y diseño de arquitectura de sistemas.</p>
-                <div class="hero-buttons">
-                    <a href="#proyectos" class="btn primary">Ver Casos de Estudio</a>
-                    <a href="#contacto" class="btn secondary">Contactar</a>
-                </div>
+    <!-- Presentación Principal -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <span class="badge">Sistemas & Educación Técnica</span>
+            <h1>Transformando Conocimiento en Soluciones Tecnológicas</h1>
+            <p>Especialista en desarrollo de software, gestión de infraestructura educativa LMS y diseño de arquitectura de sistemas.</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn primary">Ver Evidencias y Proyectos</a>
+                <a href="#contacto" class="btn secondary">Contactar</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <!-- Sobre Mí -->
+        <section id="sobre-mi" class="section-block">
+            <h2>Perfil Profesional</h2>
+            <div class="about-card">
+                <p>Con una sólida trayectoria combinación entre la <strong>Ingeniería de Sistemas</strong> y la <strong>Educación Técnica</strong>, me especializo en diseñar tanto la arquitectura de software como las estrategias pedagógicas para la formación tecnológica de alto impacto.</p>
             </div>
         </section>
 
-        <!-- Sobre Mí -->
-        <section id="sobre-mi" class="about">
-            <h2>Perfil Profesional</h2>
-            <p>Con una sólida trayectoria combinación entre la <strong>Ingeniería de Sistemas</strong> y la <strong>Educación Técnica</strong>, me especializo en diseñar tanto la arquitectura de software como las estrategias pedagógicas para la formación tecnológica de alto impacto.</p>
-        </section>
-
-        <!-- Tech Stack / Habilidades -->
-        <section id="skills" class="skills-section">
-            <h2>Stack Tecnológico</h2>
-            <div class="skills-grid">
+        <!-- Especialidades / Stack -->
+        <section id="skills" class="section-block">
+            <h2>Tecnologías & Herramientas</h2>
+            <div class="skills-row">
                 <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL Server</span></div>
                 <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
                 <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
                 <div class="skill-card"><i class="fa-solid fa-graduation-cap"></i><span>Moodle LMS</span></div>
-                <div class="skill-card"><i class="fa-solid fa-microchip"></i><span>TinkerCard / IoT</span></div>
+                <div class="skill-card"><i class="fa-solid fa-microchip"></i><span>TinkerCard</span></div>
                 <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git & GitHub</span></div>
             </div>
         </section>
 
-        <!-- Proyectos / Casos de Estudio -->
-        <section id="proyectos" class="projects-section">
-            <h2>Proyectos Destacados</h2>
-            <div class="projects-grid">
+        <!-- Proyectos con Enlaces/Botones Clicables -->
+        <section id="proyectos" class="section-block">
+            <h2>Casos de Estudio & Proyectos</h2>
+            <div class="projects-row">
 
                 <!-- Tarjeta 1: LMS Moodle -->
                 <article class="project-card">
@@ -66,16 +70,20 @@
                         <i class="fa-solid fa-server card-icon"></i>
                         <span class="category">Infraestructura LMS</span>
                     </div>
-                    <h3>Implementación & Personalización Moodle 3.7</h3>
+                    <h3>Implementación Moodle 3.7</h3>
                     <p>Configuración de bloques, gestión de cohortes, optimización del tema visual y despliegue de módulos técnicos para formación vocacional.</p>
                     <div class="card-tags">
                         <span>Moodle</span>
                         <span>PHP</span>
-                        <span>UX/UI Ed</span>
+                        <span>UX/UI</span>
                     </div>
+                    <!-- Cambia la URL entre comillas por tu enlace real -->
+                    <a href="https://github.com/percyjavier2023-source" target="_blank" class="card-btn">
+                        Ver Evidencia <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </article>
 
-                <!-- Tarjeta 2: TinkerCard / Arduino -->
+                <!-- Tarjeta 2: TinkerCard -->
                 <article class="project-card">
                     <div class="card-header">
                         <i class="fa-solid fa-cpu card-icon"></i>
@@ -88,34 +96,45 @@
                         <span>Arduino</span>
                         <span>C++</span>
                     </div>
+                    <!-- Cambia la URL por el enlace público de tu circuito -->
+                    <a href="https://www.tinkercad.com/" target="_blank" class="card-btn">
+                        Ver Circuito <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </article>
 
-                <!-- Tarjeta 3: BD & Sistemas -->
+                <!-- Tarjeta 3: SQL Server -->
                 <article class="project-card">
                     <div class="card-header">
                         <i class="fa-solid fa-network-wired card-icon"></i>
                         <span class="category">Sistemas & Datos</span>
                     </div>
-                    <h3>Modelado de Datos & Procedimientos SQL</h3>
-                    <p>Diseño de esquemas relacionales normalizados, creación de vistas, disparadores y optimización de consultas en Microsoft SQL Server.</p>
+                    <h3>Modelado SQL Server</h3>
+                    <p>Diseño de esquemas relacionales normalizados, creación de vistas, disparadores y optimización de consultas avanzadas.</p>
                     <div class="card-tags">
                         <span>SQL Server</span>
                         <span>Relational DB</span>
                         <span>Python</span>
                     </div>
+                    <!-- Cambia la URL por el enlace a tu script o repositorio -->
+                    <a href="https://github.com/percyjavier2023-source" target="_blank" class="card-btn">
+                        Ver Código SQL <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </article>
 
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer id="contacto">
-        <h2>¿Trabajemos Juntos?</h2>
-        <p>Disponible para proyectos de consultoría tecnológica, desarrollo y formación técnica.</p>
-        <div class="social-links">
-            <a href="https://github.com/percyjavier2023-source" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <div class="footer-container">
+            <h2>¿Contacto o Colaboraciones?</h2>
+            <p>Disponible para proyectos de consultoría tecnológica, desarrollo de sistemas y formación técnica.</p>
+            <div class="social-links">
+                <a href="https://github.com/percyjavier2023-source" target="_blank"><i class="fa-brands fa-github"></i> Visitar Mi GitHub</a>
+            </div>
+            <p class="copy">&copy; Percy Izquierdo - Todos los derechos reservados.</p>
         </div>
-        <p class="copy">&copy; Percy Izquierdo. Todos los derechos reservados.</p>
     </footer>
 
 </body>
