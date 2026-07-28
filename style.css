@@ -1,297 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percy Izquierdo - Ingeniero & Educador Técnico</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-:root {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --card-bg: #ffffff;
-    --card-text: #334155;
-}
+    <header>
+        <nav>
+            <div class="logo">Percy Izquierdo<span>.dev</span></div>
+            <ul>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="badge">Sistemas & Educación</span>
+                <h1>Transformando Conocimiento en Soluciones Tecnológicas</h1>
+                <p>Especialista en desarrollo de software, gestión de infraestructura educativa LMS y diseño de arquitectura de sistemas.</p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn primary">Ver Casos de Estudio</a>
+                    <a href="#contacto" class="btn secondary">Contactar</a>
+                </div>
+            </div>
+        </section>
 
-body {
-    background-color: #f1f5f9;
-    color: var(--card-text);
-    line-height: 1.6;
-}
+        <!-- Sobre Mí -->
+        <section id="sobre-mi" class="about">
+            <h2>Perfil Profesional</h2>
+            <p>Con una sólida trayectoria combinación entre la <strong>Ingeniería de Sistemas</strong> y la <strong>Educación Técnica</strong>, me especializo en diseñar tanto la arquitectura de software como las estrategias pedagógicas para la formación tecnológica de alto impacto.</p>
+        </section>
 
-/* Header */
-header {
-    background-color: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 1rem 5%;
-}
+        <!-- Tech Stack / Habilidades -->
+        <section id="skills" class="skills-section">
+            <h2>Stack Tecnológico</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL Server</span></div>
+                <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
+                <div class="skill-card"><i class="fa-solid fa-graduation-cap"></i><span>Moodle LMS</span></div>
+                <div class="skill-card"><i class="fa-solid fa-microchip"></i><span>TinkerCard / IoT</span></div>
+                <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git & GitHub</span></div>
+            </div>
+        </section>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        <!-- Proyectos / Casos de Estudio -->
+        <section id="proyectos" class="projects-section">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-grid">
 
-.logo {
-    color: var(--text-primary);
-    font-weight: 700;
-    font-size: 1.3rem;
-}
+                <!-- Tarjeta 1: LMS Moodle -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-server card-icon"></i>
+                        <span class="category">Infraestructura LMS</span>
+                    </div>
+                    <h3>Implementación & Personalización Moodle 3.7</h3>
+                    <p>Configuración de bloques, gestión de cohortes, optimización del tema visual y despliegue de módulos técnicos para formación vocacional.</p>
+                    <div class="card-tags">
+                        <span>Moodle</span>
+                        <span>PHP</span>
+                        <span>UX/UI Ed</span>
+                    </div>
+                </article>
 
-.logo span {
-    color: var(--accent);
-}
+                <!-- Tarjeta 2: TinkerCard / Arduino -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-cpu card-icon"></i>
+                        <span class="category">Electrónica & C++</span>
+                    </div>
+                    <h3>Simulación & Prototipado IoT</h3>
+                    <p>Diseño de esquemáticos electrónicos y programación de microcontroladores para automatización y control de sensores en TinkerCard.</p>
+                    <div class="card-tags">
+                        <span>TinkerCard</span>
+                        <span>Arduino</span>
+                        <span>C++</span>
+                    </div>
+                </article>
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
+                <!-- Tarjeta 3: BD & Sistemas -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-network-wired card-icon"></i>
+                        <span class="category">Sistemas & Datos</span>
+                    </div>
+                    <h3>Modelado de Datos & Procedimientos SQL</h3>
+                    <p>Diseño de esquemas relacionales normalizados, creación de vistas, disparadores y optimización de consultas en Microsoft SQL Server.</p>
+                    <div class="card-tags">
+                        <span>SQL Server</span>
+                        <span>Relational DB</span>
+                        <span>Python</span>
+                    </div>
+                </article>
 
-nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
+            </div>
+        </section>
+    </main>
 
-nav a:hover {
-    color: var(--text-primary);
-}
+    <footer id="contacto">
+        <h2>¿Trabajemos Juntos?</h2>
+        <p>Disponible para proyectos de consultoría tecnológica, desarrollo y formación técnica.</p>
+        <div class="social-links">
+            <a href="https://github.com/percyjavier2023-source" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+        <p class="copy">&copy; Percy Izquierdo. Todos los derechos reservados.</p>
+    </footer>
 
-.btn-nav {
-    background: var(--accent);
-    color: white !important;
-    padding: 0.5rem 1.2rem;
-    border-radius: 6px;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    color: white;
-    padding: 6rem 5%;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.badge {
-    background: rgba(37, 99, 235, 0.2);
-    color: #60a5fa;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border: 1px solid rgba(96, 165, 250, 0.3);
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin: 1.5rem 0 1rem;
-    line-height: 1.2;
-}
-
-.hero p {
-    color: var(--text-secondary);
-    font-size: 1.15rem;
-    margin-bottom: 2rem;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.btn {
-    padding: 0.8rem 1.8rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn.primary {
-    background: var(--accent);
-    color: white;
-}
-
-.btn.primary:hover {
-    background: var(--accent-hover);
-}
-
-.btn.secondary {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-}
-
-/* Secciones */
-section {
-    padding: 5rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #0f172a;
-    margin-bottom: 2.5rem;
-}
-
-/* Tech Stack */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-.skill-card i {
-    font-size: 2rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-}
-
-.skill-card span {
-    display: block;
-    font-weight: 600;
-    color: #334155;
-}
-
-/* Grid de Proyectos */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.card-icon {
-    font-size: 1.5rem;
-    color: var(--accent);
-}
-
-.category {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #64748b;
-    text-transform: uppercase;
-}
-
-.project-card h3 {
-    color: #0f172a;
-    margin-bottom: 0.75rem;
-}
-
-.project-card p {
-    color: #475569;
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-}
-
-.card-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.card-tags span {
-    background: #f1f5f9;
-    color: #475569;
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-/* Footer */
-footer {
-    background: var(--bg-primary);
-    color: white;
-    text-align: center;
-    padding: 4rem 5% 2rem;
-}
-
-footer h2 {
-    color: white;
-}
-
-footer p {
-    color: var(--text-secondary);
-}
-
-.social-links {
-    margin: 2rem 0;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    background: var(--accent);
-}
-
-.copy {
-    font-size: 0.85rem;
-    margin-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 1.5rem;
-}
+</body>
+</html>
