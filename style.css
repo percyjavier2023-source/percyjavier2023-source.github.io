@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1e293b;
+    color: white;
+    padding: 1rem 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+#inicio {
+    background-color: #e2e8f0;
+    padding: 4rem 5%;
+}
+
+h1 {
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+}
+
+.galeria-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.proyecto {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #2563eb;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.proyecto h3 {
+    margin-bottom: 0.5rem;
+    color: #2563eb;
+}
+
+footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
