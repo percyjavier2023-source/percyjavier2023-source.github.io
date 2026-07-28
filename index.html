@@ -3,70 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Percy Izquierdo - Portafolio Profesional</title>
+    <title>Percy Izquierdo - Ingeniero & Educador Técnico</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Encabezado y Navegación -->
     <header>
         <nav>
-            <h2>Percy Izquierdo</h2>
+            <div class="logo">Percy Izquierdo<span>.dev</span></div>
             <ul>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Especialidades & Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Presentación Principal -->
     <main>
-        <section id="inicio">
-            <h1>Docente de Informática & Estudiante de Ing. de Sistemas</h1>
-            <p>Especialista en soporte técnico, gestión de plataformas LMS, desarrollo de software y diseño de entornos de aprendizaje técnico.</p>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="badge">Sistemas & Educación</span>
+                <h1>Transformando Conocimiento en Soluciones Tecnológicas</h1>
+                <p>Especialista en desarrollo de software, gestión de infraestructura educativa LMS y diseño de arquitectura de sistemas.</p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn primary">Ver Casos de Estudio</a>
+                    <a href="#contacto" class="btn secondary">Contactar</a>
+                </div>
+            </div>
         </section>
 
-        <!-- Sección Sobre Mí -->
-        <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
-            <p>Técnico en Computación e Informática y Licenciado en Educación. Cuento con experiencia en formación técnica-productiva, soporte de hardware/software, administración de aulas virtuales y desarrollo de sistemas. Apasionado por la educación tecnológica y la arquitectura de software.</p>
+        <!-- Sobre Mí -->
+        <section id="sobre-mi" class="about">
+            <h2>Perfil Profesional</h2>
+            <p>Con una sólida trayectoria combinación entre la <strong>Ingeniería de Sistemas</strong> y la <strong>Educación Técnica</strong>, me especializo en diseñar tanto la arquitectura de software como las estrategias pedagógicas para la formación tecnológica de alto impacto.</p>
         </section>
 
-        <!-- Sección Proyectos y Especialidades -->
-        <section id="proyectos">
-            <h2>Especialidades & Proyectos</h2>
-            <div class="galeria-proyectos">
+        <!-- Tech Stack / Habilidades -->
+        <section id="skills" class="skills-section">
+            <h2>Stack Tecnológico</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL Server</span></div>
+                <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
+                <div class="skill-card"><i class="fa-solid fa-graduation-cap"></i><span>Moodle LMS</span></div>
+                <div class="skill-card"><i class="fa-solid fa-microchip"></i><span>TinkerCard / IoT</span></div>
+                <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git & GitHub</span></div>
+            </div>
+        </section>
 
-                <article class="proyecto">
-                    <h3>Gestión LMS & Moodle</h3>
-                    <p>Administración, personalización de interfaz, configuración de bloques y gestión de cursos en plataformas <strong>Moodle 3.7</strong> para entornos educativos técnicos.</p>
+        <!-- Proyectos / Casos de Estudio -->
+        <section id="proyectos" class="projects-section">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-grid">
+
+                <!-- Tarjeta 1: LMS Moodle -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-server card-icon"></i>
+                        <span class="category">Infraestructura LMS</span>
+                    </div>
+                    <h3>Implementación & Personalización Moodle 3.7</h3>
+                    <p>Configuración de bloques, gestión de cohortes, optimización del tema visual y despliegue de módulos técnicos para formación vocacional.</p>
+                    <div class="card-tags">
+                        <span>Moodle</span>
+                        <span>PHP</span>
+                        <span>UX/UI Ed</span>
+                    </div>
                 </article>
 
-                <article class="proyecto">
-                    <h3>Electrónica & Prototipado</h3>
-                    <p>Diseño y simulación de circuitos electrónicos y programación de microcontroladores utilizando <strong>TinkerCard</strong> y entorno Arduino.</p>
+                <!-- Tarjeta 2: TinkerCard / Arduino -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-cpu card-icon"></i>
+                        <span class="category">Electrónica & C++</span>
+                    </div>
+                    <h3>Simulación & Prototipado IoT</h3>
+                    <p>Diseño de esquemáticos electrónicos y programación de microcontroladores para automatización y control de sensores en TinkerCard.</p>
+                    <div class="card-tags">
+                        <span>TinkerCard</span>
+                        <span>Arduino</span>
+                        <span>C++</span>
+                    </div>
                 </article>
 
-                <article class="proyecto">
-                    <h3>Desarrollo & Bases de Datos</h3>
-                    <p>Diseño de bases de datos relacionales en <strong>SQL Server</strong> y desarrollo de scripts/aplicaciones en <strong>Python y Java</strong>.</p>
-                </article>
-
-                <article class="proyecto">
-                    <h3>Diseño Curricular Técnico</h3>
-                    <p>Estructuración de sílabos por competencias, guías prácticas, rúbricas de evaluación y material educativo interactivo para módulos de informática.</p>
+                <!-- Tarjeta 3: BD & Sistemas -->
+                <article class="project-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-network-wired card-icon"></i>
+                        <span class="category">Sistemas & Datos</span>
+                    </div>
+                    <h3>Modelado de Datos & Procedimientos SQL</h3>
+                    <p>Diseño de esquemas relacionales normalizados, creación de vistas, disparadores y optimización de consultas en Microsoft SQL Server.</p>
+                    <div class="card-tags">
+                        <span>SQL Server</span>
+                        <span>Relational DB</span>
+                        <span>Python</span>
+                    </div>
                 </article>
 
             </div>
         </section>
     </main>
 
-    <!-- Pie de Página / Contacto -->
     <footer id="contacto">
-        <h2>Contacto</h2>
-        <p>¿Interesado en coordinar o colaborar en proyectos tecnológicos y educativos?</p>
-        <p>Escríbeme a través de mi repositorio oficial de GitHub o correo institucional.</p>
+        <h2>¿Trabajemos Juntos?</h2>
+        <p>Disponible para proyectos de consultoría tecnológica, desarrollo y formación técnica.</p>
+        <div class="social-links">
+            <a href="https://github.com/percyjavier2023-source" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+        <p class="copy">&copy; Percy Izquierdo. Todos los derechos reservados.</p>
     </footer>
 
 </body>
